@@ -1,3 +1,5 @@
+// NO EXPRESS - Simple custom SSR routing
+
 // server.js
 const { createServer } = require("http");
 const { parse } = require("url");
