@@ -14,7 +14,11 @@ app.prepare().then(() => {
     const parsedUrl = parse(req.url, true);
     const { pathname, query } = parsedUrl;
 
-    handle(req, res, parsedUrl); // hands each request to next.js
+    if (pathname === "/overwrite") {
+      app.render(req, res, "/contact", query);
+    } else {
+      handle(req, res, parsedUrl); // hands each request to next.js
+    }
 
     // if (pathname === "/a") {
     //   app.render(req, res, "/b", query);
