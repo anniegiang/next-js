@@ -23,6 +23,7 @@ _Notes_
   - Include `href` attribute
     - ex: `<Link href="/about"><a>About Us</a></Link>`
     - `as` attribute customizes what the client sees in the url.
+      - ONLY CSR. If user bookmarks that page, the page will not display correctly. Need to implement SSR as well.
   - Under the hood, `Link` passes down the `onClick` function its to children elements.
     - The child element must be able to accept `onClick`.
 - Override `_app.js`
