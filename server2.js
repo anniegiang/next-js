@@ -8,6 +8,14 @@ const handle = app.getRequestHandler();
 app.prepare().then(() => {
   const server = express();
 
+  server.get("/post/:id", (req, res) => {
+    const { id } = req.params;
+    app.render(req, res, `/post`, {
+      id,
+      test: "this will appear as props in Post"
+    });
+  });
+
   // for every request
   server.get("*", (req, res) => {
     return handle(req, res);
