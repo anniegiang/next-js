@@ -7,9 +7,18 @@ const Post = ({ id, comments }) => {
       <h2>Comments</h2>
       <ul>
         {comments.map(comment => (
-          <li>{comment.body}</li>
+          <Comment {...comment} />
         ))}
       </ul>
+    </div>
+  );
+};
+
+const Comment = ({ email, body }) => {
+  return (
+    <div>
+      <h4>{email}</h4>
+      <p>{body}</p>
     </div>
   );
 };
@@ -19,7 +28,7 @@ Post.getInitialProps = async ({ query }) => {
     `https://jsonplaceholder.typicode.com/comments?postId=${query.id}`
   );
   const data = res.data;
-  return { comments: data, id: query.id };
+  return { comments: data, ...query };
 };
 
 export default Post;
