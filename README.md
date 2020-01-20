@@ -43,3 +43,5 @@ _Notes_
     - Update scripts to run new server file.
     - Use if/else statements to handle different pathnames.
     - `handle(req, res, parsedUrl)` handled by next, which handles each request.
+  - Express
+    - Setup Express server to parse info from a path, which passes on to Next's `handle`.
