@@ -14,6 +14,7 @@
 - Create a `pages` directory in the root directory.
   - React components go in here.
 - Next creates routes for each page.
+  - A new request is sent each time you go to a route.
   - No need to use react-router.
   - Name of components do not affect routing.
   - Each route is named after the name of the page file.
