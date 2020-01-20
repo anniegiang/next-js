@@ -1,3 +1,5 @@
+// overwite _app.js provided by Next
+
 import App from "next/app";
 import NavBar from "../components/NavBar";
 
