@@ -19,6 +19,8 @@
   - Name of components do not affect routing.
   - Each route is named after the name of the page file.
     - ex: `about.js` => `http://localhost:3000/about`
-
+- Use the `Link` component for CSR routing.
+  - Need to had `href` 
+    - ex: `<Link href="/about"><a>About Us</a></Link>`
 
   
