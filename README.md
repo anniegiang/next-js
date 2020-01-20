@@ -20,7 +20,9 @@
   - Each route is named after the name of the page file.
     - ex: `about.js` => `http://localhost:3000/about`
 - Use the `Link` component for CSR routing.
-  - Need to had `href` 
+  - Include `href` attribute
     - ex: `<Link href="/about"><a>About Us</a></Link>`
+  - Under the hood, `Link` passes down the `onClick` function its to children elements.
+    - The child element must be able to accept `onClick`.
 
   
