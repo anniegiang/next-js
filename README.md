@@ -6,7 +6,7 @@ Notes
   - React components go in here.
 - Next creates routes for each page.
   - Name of components do not affect routing.
-  - Each route is created after the name of the page file.
+  - Each route is named after the name of the page file.
     - ex: `about.js` => `http://localhost:3000/about`
 
 
