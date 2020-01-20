@@ -24,9 +24,14 @@
     - ex: `<Link href="/about"><a>About Us</a></Link>`
   - Under the hood, `Link` passes down the `onClick` function its to children elements.
     - The child element must be able to accept `onClick`.
-
 - Override `_app.js`
     - Create `_app.js` under pages.
     - Need to add specific code found in docs.
-
-  
+- SSR API calls
+  - Typically, we fetch data using hooks/lifecycle methods (CSR).
+  - We could fetch in the `constructor`, but we would make 2 calls both in CSR and SSR.
+  - Next uses `renderToString()` from `ReactDOMServer`
+  - `getInitialProps()`
+    - Returns an object, which will populate the inital props in a component.
+    - For the initial page load, it will execute on the server only.
+    - Will execute on the client only when navigating to a different route via `Link` or routing APIs.
