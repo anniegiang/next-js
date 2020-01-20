@@ -37,3 +37,9 @@ _Notes_
     - Returns an object, which will populate the inital props in a component.
     - For the initial page load, it will execute on the server only.
     - Will execute on the client only when navigating to a different route via `Link` or routing APIs.
+- Custom SSR routes
+  - Without Express
+    - Copy initial server from docs.
+    - Update scripts to run new server file.
+    - Use if/else statements to handle different pathnames.
+    - `handle(req, res, parsedUrl)` handled by next, which handles each request.
