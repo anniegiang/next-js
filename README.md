@@ -25,4 +25,8 @@
   - Under the hood, `Link` passes down the `onClick` function its to children elements.
     - The child element must be able to accept `onClick`.
 
+- Override `_app.js`
+    - Create `_app.js` under pages.
+    - Need to add specific code found in docs.
+
   
